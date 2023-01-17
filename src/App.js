@@ -47,7 +47,7 @@ function App() {
     const filtroReabastecer = []
 
     reabastecer.map(a => {
-      excelData.filter(e =>
+      const repoFiltrada = excelData.filter(e =>
         a.CódProduto === e.CódProduto && e.QtdEstoque > 0 && e.Filial === filial
           ? filtroReabastecer.push({
               Sku: a.CódProduto,
@@ -57,7 +57,7 @@ function App() {
       )
 
       console.log('filtroReabastecer', filtroReabastecer)
-      return
+      return repoFiltrada
     }, setReposicao(filtroReabastecer))
     console.log('filtro reabastecer', filtroReabastecer)
     setFilialAtual(filial)
