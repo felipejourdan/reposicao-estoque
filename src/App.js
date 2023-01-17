@@ -57,6 +57,7 @@ function App() {
       )
 
       console.log('filtroReabastecer', filtroReabastecer)
+      return
     }, setReposicao(filtroReabastecer))
     console.log('filtro reabastecer', filtroReabastecer)
     setFilialAtual(filial)
